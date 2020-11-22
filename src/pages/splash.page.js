@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const HomeDetail = () => {
+const Splash = ({navigation}) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.replace('Main');
+        }, 2000);
+    });
     return(
         <View style={styles.container}>
-            <Text>Detail Screen</Text>
+            <Text>Splash Screen</Text>
         </View>
     )
 }
 
-export default HomeDetail;
+export default Splash;
 
 const styles = StyleSheet.create({
     container:{
